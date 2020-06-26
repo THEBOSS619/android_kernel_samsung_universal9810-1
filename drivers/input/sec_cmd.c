@@ -74,7 +74,7 @@ void sec_cmd_set_cmd_result_all(struct sec_cmd_data *data, char *buff, int len, 
 
 	data->item_count++;
 	strncat(data->cmd_result_all, &delim1, 1);
-	strncat(data->cmd_result_all, item, strlen(item));
+	strlcat(data->cmd_result_all, item, strlen(item));
 	strncat(data->cmd_result_all, &delim2, 1);
 	strncat(data->cmd_result_all, buff, len);
 }
